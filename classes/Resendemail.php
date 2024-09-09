@@ -35,12 +35,12 @@ class Resendemail
                 //Server settings
                 $mail->SMTPDebug = 0;                      //Enable verbose debug output
                 $mail->isSMTP();                                            //Send using SMTP
-                $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-                $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                $mail->Username   = 'alsakib748@gmail.com';                     //SMTP username
-                $mail->Password   = 'xkuwltzdnoucqtmr';   //xkuw ltzd nouc qtmr                            //SMTP password
+                $mail->Host = 'smtp.gmail.com';                     //Set the SMTP server to send through
+                $mail->SMTPAuth = true;                                   //Enable SMTP authentication
+                $mail->Username = 'alsakib748@gmail.com';                     //SMTP username
+                $mail->Password = 'tforsdttgaadnbaf';   //xkuw ltzd nouc qtmr                            //SMTP password
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
-                $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                $mail->Port = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
                 //Recipients
                 $mail->setFrom('alsakib748@gmail.com', $name);
@@ -56,7 +56,7 @@ class Resendemail
                     <a href='http://localhost/oopblog/admin/verifi_email.php?token={$v_token}'>Click Here</a>
                 ";
 
-                $mail->Body  =  $email_template;
+                $mail->Body = $email_template;
 
                 $mail->send();
                 return true;
